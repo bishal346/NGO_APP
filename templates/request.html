@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+</head>
+<body>
+    <h1>Requester's Section</h1>
+    <h5>NOTE : Try to do valid request means request must be within the options and within the quantity</h5>
+    <ul>
+        {% for l in list %} 
+            <li>With us "   {{l[2]}} kg of {{l[1]}}   " is available.   "     Press {{l[0]}}     "   and the quantity to request it</li>
+        {% endfor %} 
+    </ul>
+    <form name="passdata" action="/request" method="post">
+        <label>Food_No : </label> 
+        <input type="number" name="no" required>
+        <br><br><br><br>
+        <label>Food_Name : </label>
+        <input type="text" name="name">
+        <br><br><br><br>
+        <label>Food_Quantity : </label>     
+        <input type="number" name="quant" required> 
+        <br><br><br><br>
+        <input type="submit" value="submit">
+    </form>
+    
+</body>
+</html>

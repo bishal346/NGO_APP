@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+</head>
+<body>
+    <h1>Donator's Section</h1>
+    <h3>Entre the food items along with the quantity You want to add</h3>
+    <ul>
+        {% for l in list %} 
+            <li>Entre {{l[0]}} in Food_No to donate {{l[1]}}</li>
+        {% endfor %} 
+        <li>Entre 0 in Food_No to donate a new food item</li>
+    </ul>
+    <form name="passdata" action="/donate" method="post">
+        <label>Food_No : </label> 
+        <input type="number" name="no">
+        <br><br><br><br>
+        <label>Food_Name : </label>
+        <input type="text" name="name">
+        <br><br><br><br>
+        <label>Food_Quantity : </label>     
+        <input type="number" name="quant"> 
+        <br><br><br><br>
+        <input type="submit" value="submit">
+    </form>
+    
+</body>
+</html>
